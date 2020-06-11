@@ -1,1 +1,52 @@
+#include<iostream>
+using namespace std;
 
+class Rectangle
+{
+    private:
+       int length;
+       int breadth;
+   
+    public:
+       
+       void setside(int x , int y)
+       {
+          length=x;
+          breadth=y;
+          
+       }
+       int area()
+       {
+          return length*breadth;
+       }
+};
+
+int main()
+{
+   int totalRectangle;
+  
+   cout<<"Enter no. of rectangle:";
+   cin>>totalRectangle;
+
+   Rectangle A[totalRectangle];
+  
+   for(int i=0 ; i<totalRectangle ; i++)
+   {
+       int len , breadth;
+       cout<<"Enter length and breadth of Rectangle "<<i+1<<":";
+       cin>>len>>breadth;
+       A[i].setside(len,breadth);
+    
+   }
+
+   for( int i=0 ;i<totalRectangle ; i++)
+   {
+        cout<<"Area of Reactangle "<<i+1<<":";
+        cout<<A[i].area();
+        cout<<endl;
+
+   }
+   
+   
+   return 0;
+}
